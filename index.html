@@ -3,120 +3,334 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kopi Kenangan</title>
+    <!-- {{-- FONT AWESOME --}} -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <title>Okta Haris Sutanto - Personal Website</title>
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <!-- ANIMATED BY AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- FEATHER ICONS   -->
     <script src="https://unpkg.com/feather-icons"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.7/swiper-bundle.min.css" />    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- navbar start -->
     <nav class="navbar">
-      <a href="#" class="navbar-logo">kenangan<span>senja</span>.</a>
+      <a href="#" class="navbar-logo"
+        >OktaHaris<span> Portfolio</span>.</a
+      >
 
       <div class="navbar-nav">
         <a href="#home">Home</a>
-        <a href="#about">Tentang kami</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Kontak</a>
+        <a href="#about">About Me</a>
+        <a href="#menu">Language</a>
+        <a href="#products">Projek - Projek</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="search-button"><img src="img/search.png" style="width: 20px; height: auto;" alt="Ini Search"></a>
+        <a href="#" id="shopping-cart-button"
+          ><img src="img/man.png" style="width: 20px; height: auto;"  alt="My Profile"></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
+
+      <!-- search form start -->
+      <div class="search-form">
+        <input
+          type="search"
+          name=""
+          id="search-box"
+          placeholder="search here.."
+        />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+
+      <!-- search form end -->
+
+
+      <!-- Shopping card start -->
+      <div class="nav-sisi">
+        <br>
+        <h3>This Is my <span>Gallery</span></h3>
+        <div class="cart-item">
+          <img src="img/products/biji.png" alt="Product 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <!-- <div class="item-price">IDR 30K</div> -->
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/biji.png" alt="Product 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <!-- <div class="item-price">IDR 30K</div> -->
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/biji.png" alt="Product 1">
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <!-- <div class="item-price">IDR 30K</div> -->
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping card end -->
     </nav>
 
     <!-- navbar end -->
 
     <!-- hero section start -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" data-aos="fade-down-right">
       <main class="content">
-        <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
-        <p>lorem lipsmudaskhd ahdkashdkhalsd</p>
-        <a href="#" class="cta">Beli Sekarang</a>
+        <div class="text-container">
+          <h1>Hello, I'am <span>OktaHaris</span></h1>
+          <p>Saya lahir di Kota Bogor, jurusan PPLG rombel XI-5.</p>
+          <br>
+          <a href="img/about.png" download class="cta">Download CV</a>
+        </div>
+        <div class="image-container">
+          <img src="img/okta.png" alt="Deskripsi Gambar">
+        </div>
       </main>
     </section>
+    
 
     <!-- hero section end -->
 
     <!-- about section start -->
-    <section id="about" class="about">
-      <h2><span>Tentang</span> Kami</h2>
-
+    <section id="about" class="about" data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom">>
+      <h2>About <span>Me</span></h2>
       <div class="row">
         <div class="about-img">
-        <img src="img/barista.jpg" alt="Tentang Kami">
+          <img src="img/about.png" alt="About Me" />
+        </div>
+    
+        <div class="content">
+          <h3>Pengalaman <span>saya</span></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ullam, quasi dolore porro deserunt est.
+          </p>
+    
+          <!-- Tab Titles -->
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+    
+          <!-- Tab Contents -->
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+              <li><span>Front-End</span><br>Web App Developer</li>
+              <li><span>App Development</span><br>Building Apps</li>
+            </ul>
+          </div>
+    
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2021 - Current</span><br>SMK Wikrama Student</li>
+              <li><span>2019 - 2021</span><br>SMP Negeri 1 Cigombong</li>
+              <li><span>2013 - 2019</span><br>SD Negeri Srogol 02</li>
+            </ul>
+          </div>
+    
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2021</span><br>Designing Web/App Interfaces</li>
+              <li><span>2022</span><br>Web App Developer</li>
+              <li><span>2023</span><br>Building Apps</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <div class="content">
-        <h3>Kenapa memilih kopi kami</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus 
-          omnis odio recusandae beatae incidunt reprehenderit!</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda dignissimos hic harum facere expedita libero 
-            necessitatibus recusandae cum repellendus consectetur.</p>
-      </div>
-    </div>
     </section>
-
+    
 
     <!-- about section end -->
 
     <!-- menu section start -->
-    <section id="menu" class="menu">
-      <h2><span>Menu</span> Kami</h2>
-      <p>Lorem ipsum dolor sit amet consectetur
-         adipisicing elit. Velit quam expedita sunt impedit</p>
-         
-         
-         <div class="row">
-           <div class="menu-card">
-             <img src="img/menu/espresso.jpg" alt="Espresso"
-             class="menu-card-img">
-             <h3 class="menu-card-title">-
-               Espresso -</h3>
-               <p class="menu-card-price">IDR 15K</p>
-              </div>
-           <div class="menu-card">
-             <img src="img/menu/espresso.jpg" alt="Espresso"
-             class="menu-card-img">
-             <h3 class="menu-card-title">-
-               Espresso -</h3>
-               <p class="menu-card-price">IDR 15K</p>
-              </div>
-           <div class="menu-card">
-             <img src="img/menu/espresso.jpg" alt="Espresso"
-             class="menu-card-img">
-             <h3 class="menu-card-title">-
-               Espresso -</h3>
-               <p class="menu-card-price">IDR 15K</p>
-              </div>
-           <div class="menu-card">
-             <img src="img/menu/espresso.jpg" alt="Espresso"
-             class="menu-card-img">
-             <h3 class="menu-card-title">-
-               Espresso -</h3>
-               <p class="menu-card-price">IDR 15K</p>
-              </div>
-            </div>
-            
+    <section id="menu" class="menu" >
+      <h2><span>My</span> Language & <span>Tools</span></h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quam
+        expedita sunt impedit
+      </p>
+
+      <div class="row" data-aos="zoom-in-down">
+        <div class="language">
+          <img
+            src="img/Language/html.png"
+            alt="Html"
+            class="language-img"
+          />
+          <h3 class="language-title">- Html -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+        <div class="language">
+          <img
+            src="img/Language/css.png"
+            alt="Css"
+            class="language-img"
+          />
+          <h3 class="language-title">- Css -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+        <div class="language">
+          <img
+            src="img/Language/figma.png"
+            alt="Figma"
+            class="language-img"
+          />
+          <h3 class="language-title">- Figma -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+        <div class="language">
+          <img
+            src="img/Language/bootstrap.png"
+            alt="Boostrap 5"
+            class="language-img"
+          />
+          <h3 class="language-title">- Boostrap 5 -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+        <div class="language">
+          <img
+            src="img/Language/laravel.png"
+            alt="Laravel"
+            class="language-img"
+          />
+          <h3 class="language-title">- Laravel -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+        <div class="language">
+          <img
+            src="img/Language/php.png"
+            alt="PHP"
+            class="language-img"
+          />
+          <h3 class="language-title">- PHP -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+        <div class="language">
+          <img
+            src="img/Language/js.png"
+            alt="PHP"
+            class="language-img"
+          />
+          <h3 class="language-title">- javascript -</h3>
+          <!-- <p class="language-price">IDR 15K</p> -->
+        </div>
+      </div>
     </section>
 
     <!-- menu section end -->
+    <!-- Certificate Use Swipper Start --> 
+<!-- Certificate Use Swipper Start -->
+<section class="swipper" id="swipper" data-aos="zoom-out-up">
+  <h2>Sertifikat <span>Saya</span></h2>
+  <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam inventore beatae aut iure at, aliquid unde reprehenderit officiis ratione itaque voluptatum recusandae iste debitis repellendus quo a perferendis eius maiores nesciunt. Beatae rem nam magni sunt enim quidem eius fuga, corporis laudantium, nesciunt in consequuntur maxime itaque tempore molestiae quisquam.
+  </p>
+  <br><br>
+  <div class="row">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('img/Sertifikat/S/Sertifikat K3.png');"></div>
+        <div class="swiper-slide" style="background-image: url('img/Sertifikat/S/tabellaravel.png');"></div>
+        <div class="swiper-slide" style="background-image: url('img/Sertifikat/S/C++.png');"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper@7.0.7/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 2.5,
+      speed: 1500,
+      coverflowEffect: {
+        rotate: 25,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+    });
+  </script>
+</section>
+
+<!-- Certificate Use Swipper End -->
+
+    <!-- Certificate Use Swipper End -->
+
+        <!-- Products section start -->
+
+    <section class="products" id="products" >
+      <h2><span>Projek Unggulan</span> Saya</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam inventore beatae aut iure at, aliquid unde reprehenderit officiis ratione itaque voluptatum recusandae iste debitis repellendus quo a
+         perferendis eius maiores nesciunt. Beatae rem nam magni sunt enim quidem eius fuga, corporis laudantium, nesciunt in consequuntur maxime itaque tempore molestiae quisquam.
+      </p>
+
+      <div class="row" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
+        <div class="product-card">
+          <div class="product-icons"></div>
+          <div class="product-image">
+            <img src="img/products/Masjid.png" alt="Product 1" class="item-detail-button" data-modal-id="masjid-detail-modal" style="cursor: pointer; max-width: 450px;" />
+          </div>
+          <div class="product-content">
+            <h3>Projek Masjid</h3>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/products/Agenda.png" alt="Product 2" class="item-detail-button" data-modal-id="agenda-detail-modal" style="cursor: pointer; max-width: 450px;" />
+          </div>
+          <div class="product-content">
+            <h3>Agenda</h3>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/products/LapCug.png" alt="Product 3" class="item-detail-button" data-modal-id="lapcug-detail-modal" style="cursor: pointer; max-width: 450px;" />
+          </div>
+          <div class="product-content">
+            <h3>UI lapCug E-Commerce</h3>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="img/products/Vue.png" alt="Product 4" class="item-detail-button" data-modal-id="vue-detail-modal" style="cursor: pointer; max-width: 450px;" />
+          </div>
+          <div class="product-content">
+            <h3>Vue Js</h3>
+          </div>
+        </div>
+    </section>
+
+    <!-- Products section end -->
 
     <!-- contact section start -->
-    <section id="contact" class="contact">
-      <h2><span>Kontak</span> Kami</h2>
+    <section id="contact" class="contact" data-aos="fade-up">
+      <h2><span>Kontak</span> Saya</h2>
       <p>Lorem ipsum dolor sit amet consectetur
          adipisicing elit. Velit quam expedita sunt impedit</p>
          
@@ -147,40 +361,128 @@
               placeholder="no hp">
 
             </div>
-            <button type="submit" class="btn">Kirim Pesan</button>
+            <a href="#" class="btn">Kirim Pesan</a>
           </form>
 
           
          </div>
     </section>
-
     <!-- contact section end -->
-<!-- footer start -->
+    <!-- footer start -->
 
-<footer>
-  <div class="social">
-    <a href="#"><i data-feather="instagram"></i></a>
-    <a href="#"><i data-feather="twitter"></i></a>
-    <a href="#"><i data-feather="facebook"></i></a>
-  </div>
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
 
-  <div class="links">
-    <a href="#home">Home</a>
-    <a href="#about">Tentang Kami</a>
-    <a href="#menu">Menu</a>
-    <a href="#contact">Kontak</a>
-  </div>
+      <div class="links">
+        <a href="#home">Beranda</a>
+        <a href="#about">About Me</a>
+        <a href="#menu">Portofolio</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-  <div class="credit">
-    <p>created by <a href="">Okta Haris Sutanto</a>. 
-     | &copy; 2023.</p>
-  </div>
-</footer>
+      <div class="credit">
+        <p>created by <a href="">Okta Haris Sutanto</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
 
+    <!-- footer end -->
 
-
-
-<!-- footer end -->
+    <!-- modal BoX Item detail start -->
+    <div class="modal" id="masjid-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/Masjid.png" alt="Product 1" style="border: 1px var(--hover) solid;" />
+          <div class="product-content">
+            <h3>Masjid Wikrama</h3>
+            <p>
+              Sebenarnya, proyek ini sudah saya kerjakan sejak kelas 10. Proyek ini saya kerjakan karena ada event dan juga untuk meningkatkan skill selama 1 tahun.
+              Bahasa yang digunakan antara lain : 
+            </p>
+            <!-- <div class="product-price">IDR 35K <span>IDR 60K</span></div> -->
+            <div class="language">
+            <img src="img/Language/css.png"><img src="img/Language/js.png"><img src="img/Language/php.png">
+          </div>
+            <a href="#"
+              ><i class="fa-solid fa-mosque"></i><span>masjid</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="agenda-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/Agenda.png" alt="Product 2" style="border: 1px #000 solid;" />
+          <div class="product-content">
+            <h3>Agenda Harian</h3>
+            <p>
+              Ini adalah proyek kerja tim, web ini dikerjakan karena Tugas p5, yang dimana masing masing kelompok memiliki tugas yang berbeda
+            </p>
+            <div class="language">
+              <img src="img/Language/css.png"><img src="img/Language/js.png"><img src="img/Language/php.png">
+            </div>
+            <!-- <div class="product-price">IDR 35K <span>IDR 60K</span></div> -->
+            <br>
+            <a href="#"
+              ><i class="fa-solid fa-calendar-days"></i><span>Agenda</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="vue-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/Vue.png" alt="Product 3" style="border: 1px #000 solid;" />
+          <div class="product-content">
+            <h3>Vue javascript</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+              perferendis. Itaque molestiae repellendus magni maiores
+              perspiciatis excepturi eveniet sint dolore eum explicabo aliquid,
+              aperiam sunt.
+            </p>
+            <div class="language">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png"><img src="img/Language/js.png"><img src="img/Language/laravel.png">
+            </div>
+            <!-- <div class="product-price">IDR 35K <span>IDR 60K</span></div> -->
+            <br>
+            <a href="#"
+              ><i class="fa-solid fa-blog"></i><span>Vue</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="lapcug-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/LapCug.png" alt="Product 4" style="border: 1px #000 solid;" />
+          <div class="product-content">
+            <h3>UI lapCug E-Commerce</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nesciunt ea ipsa?
+            </p>
+            <div class="language">
+              <img src="img/Language/css.png"><img src="img/Language/js.png"><img src="img/Language/php.png">
+            </div>
+            <!-- <div class="product-price">IDR 35K <span>IDR 60K</span></div> -->
+            <a href="#" style="width: 60%;"
+              ><i class="fa-solid fa-blog"></i><span>LapCug Web</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal BoX Item detail end -->
 
     <!-- FEATHER ICONS -->
     <script>
@@ -189,5 +491,11 @@
 
     <!-- my javascript -->
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+       AOS.init({
+        duration: 1900,
+       });
+    </script>
   </body>
 </html>
